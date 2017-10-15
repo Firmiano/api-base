@@ -1,10 +1,10 @@
-import { IController } from "./controller.interface";
-import * as restify from "restify";
+import { IController } from './controller.interface';
+import * as restify from 'restify';
 
 export class ApiStartup {
 
     private restifyServer: restify.Server;
-    public port: number = 3000;
+    public port: Number = 3000;
 
     public controllers(): Array<IController> {
         const controllers: Array<IController> = new Array<IController>();
