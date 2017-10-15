@@ -4,17 +4,9 @@
         "target": "es6",
         "noImplicitAny": false,
         "moduleResolution": "node",
+        "declaration": true,
         "sourceMap": false,
-        "outDir": "dist",
-        "baseUrl": ".",
-        "paths": {
-            "*": [
-                "node_modules/*",
-                "src/types/*"
-            ]
-        }
-    },
-    "include": [
-        "src/**/*"
-    ]
+        "strict": true,
+        "outDir": "./dist"
+    }
 }
