@@ -1,5 +1,5 @@
 {
-    "name": "api-base",
+    "name": "base-api-firmiano",
     "version": "1.0.0",
     "description": "api base using typescript",
     "scripts": {
