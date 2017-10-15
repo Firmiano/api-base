@@ -1,4 +1,4 @@
-import { IController } from './controller.interface';
+import { IController } from 'controller';
 import * as restify from 'restify';
 
 export class ApiStartup {

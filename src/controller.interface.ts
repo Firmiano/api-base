@@ -1,5 +1,7 @@
-import { Server } from 'restify';
+declare module 'controller' {
+    import { Server } from 'restify';
 
-export interface IController {
-    register(server: Server): void;
+    export interface IController {
+        register(server: Server): void;
+    }
 }

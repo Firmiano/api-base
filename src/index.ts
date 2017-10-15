@@ -1,2 +1,2 @@
-export { IController } from './controller.interface';
+export { IController } from 'controller';
 export { ApiStartup } from './api.strartup';
