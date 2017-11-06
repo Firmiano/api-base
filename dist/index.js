@@ -12,10 +12,7 @@ const restify = require("restify");
 class ApiStartup {
     constructor() {
         this.port = 3000;
-    }
-    controllers() {
-        const controllers = new Array();
-        return controllers;
+        this.controllers = new Array();
     }
     Run() {
         return __awaiter(this, void 0, void 0, function* () {
@@ -27,7 +24,7 @@ class ApiStartup {
             this.restifyServer.use(restify.plugins.jsonp());
             this.restifyServer.use(restify.plugins.gzipResponse());
             this.restifyServer.use(restify.plugins.bodyParser({ mapParams: true }));
-            this.controllers().forEach(element => {
+            this.controllers.forEach(element => {
                 element.register(this.restifyServer);
             });
             return new Promise((resolve, reject) => {

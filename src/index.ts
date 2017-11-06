@@ -9,11 +9,7 @@ export class ApiStartup {
 
     private restifyServer: restify.Server;
     public port: Number = 3000;
-
-    public controllers(): Array<IController> {
-        const controllers: Array<IController> = new Array<IController>();
-        return controllers;
-    }
+    public controllers: Array<IController> = new Array<IController>();
 
     async Run(): Promise<any> {
 
@@ -26,7 +22,7 @@ export class ApiStartup {
         this.restifyServer.use(restify.plugins.gzipResponse());
         this.restifyServer.use(restify.plugins.bodyParser({ mapParams: true }));
 
-        this.controllers().forEach(element => {
+        this.controllers.forEach(element => {
             element.register(this.restifyServer);
         });
 

@@ -5,6 +5,6 @@ export interface IController {
 export declare class ApiStartup {
     private restifyServer;
     port: Number;
-    controllers(): Array<IController>;
+    controllers: Array<IController>;
     Run(): Promise<any>;
 }
